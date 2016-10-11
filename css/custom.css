@@ -1,6 +1,7 @@
 
 body {
 margin-top: 54px;
+color: white;
 }
 
 /* color de fondo NavBar */
@@ -9,7 +10,7 @@ margin-top: 54px;
 }
 /* color de letras NavBar */
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(237,28,35,1);
 }
 .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
   color: rgba(237,28,35,1);
@@ -35,30 +36,42 @@ margin-top: 54px;
 .navbar-brand .nav-link:hover,.navbar-brand .nav-link:focus {
   color: rgba(0,0,0,0.8);
 }
-
-/* Tamaño y Fonts de navbar-nav */
-
-.navbar-nav {
-  font-family: 'juice ITC', arial;
-  font-size: 22px;
+navbar-light > button {
+  color: rgba(237,28,35,1);
 }
-
 /* Propiedades del logo */
 .logo {
   width: 60px;
   animation-name: abanico;
-  animation-duration: 1s;
+  animation-duration: 4s;
   animation-iteration-count: 1;
-  animation-timing-function: linear;
+  animation-timing-function: ease-out;
+  animation-fill-mode:  backwards;
 }
 @keyframes abanico {
   0% {
+    opacity: 0;
     transform: rotateY(-90deg);
-  100%
+    
   }
-
+  50% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+  80% {
+    opacity: 0.1
+    transform: rotateY(-90deg);
+  }
 }
-
+/* Propiedades del Nombre */
+.nombre {
+  animation-name: nombre;
+  animation-duration: 2.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode:  backwards;
+  animation-delay: 1.5s;
+}
 .nombreuno {
   font-family : 'Juice ITC';
   font-weight: bold;
@@ -69,11 +82,14 @@ margin-top: 54px;
   font-family: 'Colonna MT' !important;
   color: rgba(237,28,35,1) !important;
 }
-
-
-
+@keyframes nombre {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+}
 .div1 {
-  height: 900px;
+  height: 600px;
   background: rgb(237,28,35);
   background: -moz-linear-gradient(top,  rgba(237,28,35,1) 0%, rgba(237,28,35,1) 85%, rgba(79,0,0,1) 100%);
   background: -webkit-linear-gradient(top,  rgba(237,28,35,1) 0%,rgba(237,28,35,1) 85%,rgba(79,0,0,1) 100%);
@@ -81,7 +97,7 @@ margin-top: 54px;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed1c23', endColorstr='#4f0000',GradientType=0 );
   }
 .div2 {
-  height: 900px;
+  height: 600px;
   background: rgb(79,0,0);
   background: -moz-linear-gradient(top,  rgba(79,0,0,1) 1%, rgba(79,0,0,1) 85%, rgba(237,28,35,1) 100%);
   background: -webkit-linear-gradient(top,  rgba(79,0,0,1) 1%,rgba(79,0,0,1) 85%,rgba(237,28,35,1) 100%);
