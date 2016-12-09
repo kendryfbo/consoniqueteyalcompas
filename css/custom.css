@@ -47,6 +47,10 @@ navbar-light > button {
   animation-iteration-count: 1;
   animation-timing-function: ease-out;
   animation-fill-mode:  backwards;
+  transition: transform 1s ease-in-out 
+}
+.logo:hover {
+  transform: rotateY(180deg);
 }
 @keyframes abanico {
   0% {
